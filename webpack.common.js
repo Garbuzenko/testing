@@ -3,7 +3,9 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  devtool: 'source-map',
+  devServer: {
+    port: 9000,
+  },
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -33,8 +35,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.svg$/,
         type: 'asset/resource',
+      },
+      {
+      test: /\.s[ac]ss$/i,
+      use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+      ],
       },
     ],
   },

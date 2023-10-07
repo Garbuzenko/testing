@@ -1,19 +1,19 @@
-import validate from "./validator";
-import paySystem from "./paySystem";
+import ValidationForm from "../components/validation-form/validation-form";
+import CardList from "../components/cards-list/cards-list";
 
-document.querySelector("#card-submit").addEventListener("click", (event) => {
-  event.preventDefault();
-  const num = document.querySelector("#numberCard-input").value;
-  if (validate(num)) {
-    paySystem(num);
-  } else {
-    alert("Invalid card number");
-  }
-});
-document.querySelector("#input-reset").addEventListener((event) => {
-  event.preventDefault();
-  document.form[0].reset();
-  document.querySelectorAll(".card-item").forEach((el) => {
-    el.classList.remove("active");
+document.addEventListener("DOMContentLoaded", () => {
+  const validationForm = new ValidationForm(
+    document.querySelector(".validation-form")
+  );
+
+  const button = document.querySelector(".validation-form__btn");
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    //проверка валидации карты
+    validationForm.checkValid();
+
+    //проверка типа карты
+    validationForm.checkType();
   });
 });
