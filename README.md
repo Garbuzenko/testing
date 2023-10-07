@@ -2,7 +2,6 @@
 
 **CI** [![Build status](https://ci.appveyor.com/api/projects/status/fotanqm2v6hmr7kb?svg=true)](https://ci.appveyor.com/project/garbuzenko/testing)    [GitHub Pages](https://garbuzenko.github.io/testing/)
 
-
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
