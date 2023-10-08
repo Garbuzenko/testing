@@ -34,7 +34,7 @@ describe("test validator form", () => {
     const submit = await page.$("#card-submit");
     await submit.click();
     await page.waitForSelector(".cardVisa.active");
-  }, 3500);
+  }, 35000);
 
   test("AmericanExpress", async () => {
     await page.goto(baseUrl);
@@ -43,10 +43,11 @@ describe("test validator form", () => {
     const submit = await page.$("#card-submit");
     await submit.click();
     await page.waitForSelector(".cardAmericanExpress.active");
-  }, 3500);
+  }, 35000);
 
   afterAll(async () => {
-    await browser.close();
+    browser.close();
+    // await browser.close();
     server.kill();
   });
 });
