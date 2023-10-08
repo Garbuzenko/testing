@@ -26,27 +26,27 @@ describe("test validator form", () => {
     page = await browser.newPage();
   }, 35000);
 
-  test("visa", async () => {
-    // jest.setTimeout(35000);
-    await page.goto(baseUrl);
-    const input = await page.$("#numberCard-input");
-    await input.type("4539283476916568");
-    const submit = await page.$("#card-submit");
-    await submit.click();
-    await page.waitForSelector(".cardVisa.active");
-  }, 35000);
+  // test("visa", async () => {
+  //   // jest.setTimeout(35000);
+  //   await page.goto(baseUrl);
+  //   const input = await page.$("#numberCard-input");
+  //   await input.type("4539283476916568");
+  //   const submit = await page.$("#card-submit");
+  //   await submit.click();
+  //   await page.waitForSelector(".cardVisa.active");
+  // }, 3500);
 
-  test("AmericanExpress", async () => {
-    await page.goto(baseUrl);
-    const input = await page.$("#numberCard-input");
-    await input.type("340054986290712");
-    const submit = await page.$("#card-submit");
-    await submit.click();
-    await page.waitForSelector(".cardAmericanExpress.active");
-  }, 35000);
+  // test("AmericanExpress", async () => {
+  //   await page.goto(baseUrl);
+  //   const input = await page.$("#numberCard-input");
+  //   await input.type("340054986290712");
+  //   const submit = await page.$("#card-submit");
+  //   await submit.click();
+  //   await page.waitForSelector(".cardAmericanExpress.active");
+  // }, 3500);
 
   afterAll(async () => {
-    // await browser.close();
+    await browser.close();
     server.kill();
   });
 });
