@@ -1,6 +1,6 @@
 # Домашнее задание к занятию "4.Организация тестирования"
 
-**CI** [![Build status](https://ci.appveyor.com/api/projects/status/fotanqm2v6hmr7kb?svg=true)](https://ci.appveyor.com/project/garbuzenko/testing)    [GitHub Pages](https://garbuzenko.github.io/testing/)
+**CI** [![Build status](https://ci.appveyor.com/api/projects/status/g8iaeeghiyhw4j5d?svg=true)](https://ci.appveyor.com/project/garbuzenko/testing)    [GitHub Pages](https://garbuzenko.github.io/testing/)
 
 Правила сдачи задания:
 
