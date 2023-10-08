@@ -46,7 +46,7 @@ describe("test validator form", () => {
   }, 35000);
 
   afterAll(async () => {
-    await browser.close();
+    // await browser.close();
     server.kill();
   });
 });
